@@ -1,0 +1,17 @@
+.icon {
+    height: 18px;
+    width: 18px;
+}
+
+.author-avatar{
+    height: 48px;
+    width: 48px;
+    @media screen and (max-width: 768px) {
+        height: 40px;
+        width: 40px;        
+    }
+    @media screen and (max-width: 576px) {
+        height: 32px;
+        width: 32px;        
+    }
+}
