@@ -16,28 +16,26 @@ interface CardProps {
 }
 
 
-export const Card = ({ 
-    post 
-}: CardProps) => {
+export const Card = ({ post }: CardProps) => {
     return (
         <div className="post card overflow-hidden">
             {post.imgPath && (
-                <img 
-                    src={post.imgPath || 'default-image-path.jpg'}
-                    alt={post.title}
+                <img
+                    src={`${post.imgPath}`}
+                    alt="post img"
                     style={{
                         objectFit: "cover",
                         width: "100%",
-                        objectPosition: "center"
+                        objectPosition: "center",
                     }}
                 />
             )}
             <div className="card-body">
-                <p className="fw-semibold mb-2">{post.title}</p>
+                <p className="fw-semibold mb-2">{post.type}</p>
                 <div className="d-flex flex-row justify-content-between gap-xl-5 gap-lg-3 gap-md-2 gap-0">
                     <h4>{post.title}</h4>
                     <div className="dropdown">
-                        <img 
+                        <img
                             src="/menu.svg"
                             alt="menu"
                             className="dropdown-toggle"
@@ -46,24 +44,18 @@ export const Card = ({
                         />
                         <ul className="dropdown-menu">
                             <li>
-                                <button
-                                    className="dropdown-item" type="button"
-                                >
+                                <button className="dropdown-item" type="button">
                                     Edit
                                 </button>
                             </li>
                             <li>
-                                <button
-                                    className="dropdown-item" type="button"
-                                >
+                                <button className="dropdown-item" type="button">
                                     Report
                                 </button>
                             </li>
                             <li>
-                                <button
-                                    className="dropdown-item" type="button"
-                                >
-                                    Save
+                                <button className="dropdown-item" type="button">
+                                    Option 3
                                 </button>
                             </li>
                         </ul>
@@ -151,7 +143,7 @@ export const Card = ({
                         <img
                             src="/share.svg"
                             alt="share"
-                            className=""
+                            className="icon"
                         />
                         <p className="d-sm-none block">Share</p>
                     </button>

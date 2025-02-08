@@ -2,3 +2,23 @@
     height: 18px;
     width: 18px;
 }
+
+.hero{
+    height: clamp(236px, 40vw, 440px);
+}
+
+
+.btn-secondary {
+    background-color: #eeeeee;
+    border: #eeeeee;
+    color: black;
+    font-weight: 600;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #eeeeee;
+}
+
+.btn:hover {
+    background-color: #cccccc !important; /* Hover background color */
+}
